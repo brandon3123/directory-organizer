@@ -1,3 +1,5 @@
+import time
+
 import os
 import shutil
 
@@ -23,6 +25,18 @@ class DirectoryUtil:
             return Extension[extension.upper()]
         except:
             return Extension.UNKNOWN
+
+    @staticmethod
+    def is_file(path):
+        return os.path.isfile(path)
+
+    @staticmethod
+    def is_directory(path):
+        return os.path.isdir(path)
+
+    @staticmethod
+    def file_creation_time(file):
+        return time.ctime(os.path.getctime(file))
 
     @staticmethod
     def get_file_path(event):

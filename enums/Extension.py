@@ -28,4 +28,5 @@ class Extension(Enum, settings=NoAlias):
     SVG = 'vectors'
     CERT = 'certificates'
     GIF = 'gifs'
+    JKS = 'jks'
     UNKNOWN = 'misc'
