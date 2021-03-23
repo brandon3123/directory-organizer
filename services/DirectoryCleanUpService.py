@@ -6,7 +6,7 @@ from utils.DirectoryUtil import DirectoryUtil
 from utils.FormattingUtil import FormattingUtil
 
 
-class InitialCleanupService:
+class DirectoryCleanupService:
 
     def clean_up_directory(self, path):
         os.chdir(path)

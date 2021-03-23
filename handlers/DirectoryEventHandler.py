@@ -9,7 +9,7 @@ from enums.Constant import Constant
 
 class DirectoryEventHandler(FileSystemEventHandler):
     """
-    Class to handle events from our observer inside directoryOrganizer.py.
+    Class to handle events from our observer inside watchDirectory.py.
     Once an event is fired, we listen for "on_created" events which will then
     be organized into the following folder structure.
 

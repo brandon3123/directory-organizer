@@ -1,8 +1,8 @@
 import sys
 
-from services.InitialCleanUpService import InitialCleanupService
+from services.DirectoryCleanUpService import DirectoryCleanupService
 
-cleanup_service = InitialCleanupService()
+cleanup_service = DirectoryCleanupService()
 
 if __name__ == "__main__":
 
