@@ -39,4 +39,4 @@ class DirectoryCleanupService:
 
             organized_count += 1
 
-        print("Organized " + str(organized_count) + " files.")
+        return organized_count
