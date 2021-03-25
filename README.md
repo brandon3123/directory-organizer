@@ -1,6 +1,6 @@
 # Directory Organizer
 
-This is a project that I created to help me organize directorys on my computer. Especially my Downloads folder...
+This is a project that I created to help me organize directories on my computer. Especially my Downloads folder...
 
 This project contains the following scripts.
 
