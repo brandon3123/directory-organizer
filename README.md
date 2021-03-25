@@ -1,17 +1,30 @@
 # Directory Organizer
 
-This project will allow you to keep any directory of your choosing organized by file type/date.
+This is a project that I created to help me organize directorys on my computer. Especially my Downloads folder...
 
-## Instructions
+This project contains the following scripts.
 
-1. Install Python 3.x
-    * https://www.python.org/downloads/
-
-2. To monitor a directory for changes, simply run the **directoryOrganizer.py** file with a command line argument of the directory to monitor.
-
-        python3 directoryOrganizer.py /Users/you/Downloads
+1. watchDirectory.py
+    * Watches a directory of your choosing and organizes files that are placed inside said directory automatically.
+2. directoryHelper.py
+    * General script to perform the following on a chosen directory.
+        * Count the number of loose files in a directory (ones not inside a folder)
+        * Organize the directory. Moves loose files into folders by type/creation date
+        * Scans the directory for any unhandled extensions
         
-## Run On Mac Startup
+**Note**: I chose to implement custom folder names for a number of extensions. This accomplishes the following.
+* More meaningful folder names
+* Grouping common extensions together in single folders.
+
+# Instructions
+
+### Watch Directory (Organize dynamically) 
+
+To monitor a directory for changes, open a terminal and simply run the **directoryOrganizer.py** file with a command line argument of the directory to monitor.
+
+    python directoryOrganizer.py /Users/you/Downloads
+        
+### Run On Mac Startup
 
 1. Create .plist file similar to the following template.
 
@@ -49,3 +62,15 @@ This project will allow you to keep any directory of your choosing organized by 
 
        sudo launchctl load ~/Library/LaunchAgents/pListCreated
 5. Enjoy! Your script should now be running and will continue to run on startup.
+
+### Directory Helper (Statically Organize)
+
+Open a terminal and run the **directoryHelper.py** file with a command line argument of the directory to organize.
+
+    python directoryHelper.py /Users/you/Downloads
+    
+The following functionality will be available to you.
+
+* Count the number of loose files in a directory (ones not inside a folder)
+* Organize the directory. Moves loose files into folders by type/creation date
+* Scans the directory for any unhandled extensions
