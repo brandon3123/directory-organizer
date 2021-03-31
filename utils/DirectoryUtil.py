@@ -25,7 +25,7 @@ class DirectoryUtil:
     @staticmethod
     def files_in_directory(path):
         files = os.listdir(path)
-        return list(filter(lambda name: DirectoryUtil.is_file(path + name), files))
+        return list(filter(lambda name: DirectoryUtil.is_file(path + name) and not name.startswith('.'), files))
 
     @staticmethod
     def is_file(path):

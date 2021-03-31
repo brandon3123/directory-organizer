@@ -42,7 +42,7 @@ if __name__ == "__main__":
                     output("No unknown extensions found.")
             elif "2" == action:
                 organized_count = cleanup_service.clean_up_directory(directory)
-                output("Organized " + organized_count + " files.")
+                output("Organized " + str(organized_count) + " files.")
             elif action == "3":
                 files = DirectoryUtil.files_in_directory(directory)
                 output("Number of files: " + str(len(files)))

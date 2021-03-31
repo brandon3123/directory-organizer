@@ -15,7 +15,7 @@ class DirectoryCleanupService:
             extension = DirectoryUtil.get_file_extension(file)
 
             # Get the files creation date.
-            creation_date = DirectoryUtil.file_creation_time(file)
+            creation_date = DirectoryUtil.file_creation_time(directory + file)
 
             # Format the files creation date as YYYY-MM-DD.
             formatted_creation_date = FormattingUtil.year_month_day_from_ct_time(creation_date)
@@ -25,7 +25,7 @@ class DirectoryCleanupService:
                 DirectoryUtil.create_directory_at_path(directory, extension.value)
                 print("Created " + extension.value + " directory")
 
-            extension_directory = directory + Constant.FORWARD_SLASH.value + extension.value
+            extension_directory = directory + extension.value
 
             extension_with_time_stamp_directory = extension_directory + Constant.FORWARD_SLASH.value + formatted_creation_date
 
@@ -35,7 +35,7 @@ class DirectoryCleanupService:
                 print("Created " + extension_with_time_stamp_directory + " directory")
 
             # Move the file to the directory
-            DirectoryUtil.move_file_to_directory(extension_with_time_stamp_directory, file)
+            DirectoryUtil.move_file_to_directory(extension_with_time_stamp_directory, directory + file)
 
             organized_count += 1
 
